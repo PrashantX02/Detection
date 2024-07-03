@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:padding="@dimen/_8sdp"
+    android:background="@color/LightBlack"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:background="@drawable/background_stoke"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_400sdp"
+        android:padding="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <EditText
+            android:id="@+id/text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@null"
+            android:textSize="@dimen/_18sdp"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            android:hint="..." />
+    </ScrollView>
+
+    <SeekBar
+        android:id="@+id/size_seekbar"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:progressBackgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="@+id/scrollView"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView"
+        app:srcCompat="@drawable/copy" />
+<!--    -->
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/gallery"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginBottom="@dimen/_26sdp"
+        android:background="@color/dark_blue"
+        android:backgroundTint="@color/dark_blue"
+        app:cardCornerRadius="@dimen/_3sdp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            app:srcCompat="@drawable/diaphragm" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
